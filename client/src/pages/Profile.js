@@ -9,6 +9,7 @@ import Nav1 from "../components/Nav1";
 import { FormBtn } from "../components/Form";
 import axios from "axios";
 
+
 const styles = {
   width: "250px",
   height: "250px",
@@ -167,7 +168,9 @@ class Profile extends Component {
                             color: "#A0D413"
                           }}
                         >
-                          <a style={{ color: "#A0D413"}} href="/Tessel">&#xf043;</a>
+                             <a style={{ color: "#A0D413"}} href="/Tessel">&#xf043;</a>
+                          {/* http://192.168.1.101:80 */}
+                          {/* <a style={{ color: "#A0D413"}} href="/Tessel">&#xf043;</a> */}
                         </td>
                       </tr>
                     );

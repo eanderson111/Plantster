@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
 import { FormBtn } from "../components/Form";
 import { asyncContainer, Typeahead } from "react-bootstrap-typeahead";
 import SearchBar from "../components/SearchBar";
@@ -74,7 +73,7 @@ class Plants extends Component {
       );
     }
   }
-    this.loadBooks();
+    this.loadPlants();
     this.getUser()
   }
   componentDidUpdate(prevProps, prevState) {
@@ -94,8 +93,8 @@ class Plants extends Component {
     }
   }
 
-  loadBooks = () => {
-    API.getBooks()
+  loadPlants = () => {
+    API.getPlants()
       .then(res =>
         this.setState({ plants: res.data, Type: "", Name: "", Comments: "" })
       )
@@ -191,9 +190,9 @@ class Plants extends Component {
     });
   };
 
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
+  deletePlant = id => {
+    API.deletePlant(id)
+      .then(res => this.loadPlants())
       .catch(err => console.log(err));
   };
 

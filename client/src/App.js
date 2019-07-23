@@ -49,32 +49,3 @@ render() {
 }
 
 export default App;
-
-
-/*
-
-function App() {
-  return (
-    <Router>
-      <div>
-        
-        <Switch>
-          
-
-          <Route exact path="/" component={Homepage} />
-          <Route exact path="/Login" component={Login} />
-          <Route exact path="/Signup" component={Signup} />
-          <Route exact path="/Profile" component={Profile} />
-          <Route exact path="/Plants" component={Plants} />
-          <Route exact path="/books/:id" component={Detail} />
-          <Route component={NoMatch} />
-        </Switch>
-      </div>
-    </Router>
-  );
-}
-
-
-export default App;
-
-*/
